@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Container } from '../common/container/container.component';
 import {
   HeroContainer,
@@ -17,15 +18,15 @@ export const Hero = () => {
             <h2>Koushith Amin</h2>
             <p>Frontend Engineer✨</p>
           </div>
-          <div className='photo'>
-            <img src='profile-pic.JPG' alt='photo' />
+          <div className='hero-avatar'>
+            <img src='/profile-pic.JPG' alt='photo' layout='fill' />
           </div>
         </InfoContainer>
         <DescriptionContainer>
           <p>Hey, I'm koushith</p>
           <Description>
-            I'm a Bangalore based Product Designer and Engineer. currently crafting Beautiful UI's and Building the
-            interface for web3 Apps <span>@ConsensoLabs</span> .
+            I'm a Bangalore based Product Designer and Frontend Engineer. currently crafting Beautiful UI's and Building
+            the interface for web3 Apps <span>@ConsensoLabs</span> .
           </Description>
           <Description>
             {' '}

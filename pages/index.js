@@ -6,6 +6,8 @@ import { Card } from './src/components/card/card.component';
 import { Hero } from './src/components/hero/hero.component';
 import { HackathonProjects } from './src/components/hackathon-project/projects/hackathon-project.component';
 import { HackathonSection } from './src/components/hackathon-project/hackathon-section.component';
+import { SkillsSection } from './src/components/skills-section/skills-section.component';
+import { WorkExperience } from './src/components/experience/experience-section.component';
 
 export default function Home() {
   return (
@@ -26,6 +28,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <HackathonSection />
+      {/* <SkillsSection /> */}
+      <WorkExperience />
     </div>
   );
 }

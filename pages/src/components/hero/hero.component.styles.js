@@ -13,8 +13,8 @@ export const InfoContainer = styled.div`
   justify-content: space-between;
 
   img {
-    width: 150px;
-    height: 150px;
+    width: 150px !important;
+    height: 150px !important;
     border-radius: 50%;
     border: 5px solid #5d5dff;
     object-fit: cover;
