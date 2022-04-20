@@ -1,6 +1,6 @@
 import { Container, ProjectContainer, Description, Pill, PillContainer } from './hackathon-project.component.styles';
 
-export const Projects = () => {
+export const Project = () => {
   return (
     <ProjectContainer>
       <Container>

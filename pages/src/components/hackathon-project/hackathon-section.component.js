@@ -5,7 +5,7 @@ import {
   Button,
   ShowAllContainer,
 } from './hackathon-section.component.styles';
-import { Projects } from './projects/hackathon-project.component';
+import { Project } from './projects/hackathon-project.component';
 
 export const HackathonSection = () => {
   return (
@@ -13,12 +13,12 @@ export const HackathonSection = () => {
       <Container>
         <h2>Hackathon and Hobby Projects</h2>
         <ProjectsContainer>
-          <Projects />
-          <Projects />
-          <Projects />
-          <Projects />
-          <Projects />
-          <Projects />
+          <Project />
+          <Project />
+          <Project />
+          <Project />
+          <Project />
+          <Project />
           <ShowAllContainer>
             <Button>See All Projects</Button>
           </ShowAllContainer>

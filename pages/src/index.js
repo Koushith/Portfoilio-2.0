@@ -5,3 +5,4 @@ export * from './components/common/container/container.component';
 export * from './components/hackathon-project/projects/hackathon-project.component';
 export * from './components/skills-section/skills-section.component';
 export * from './components/experience/experience-section.component';
+export * from './components/blog-section/blog-section.component';
