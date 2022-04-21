@@ -15,6 +15,7 @@ export const NavbarContainer = styled.nav`
   margin: 0 auto;
   h2 {
     color: #d9e3ea;
+    font-size: 2rem;
   }
   ul {
     list-style: none;
@@ -23,6 +24,9 @@ export const NavbarContainer = styled.nav`
     justify-content: center;
     gap: 2rem;
     color: #d9e3ea;
+  }
+  li {
+    /* font-size: 1.8rem; */
   }
   li:hover {
     color: #5d5dff;

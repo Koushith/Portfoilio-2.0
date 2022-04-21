@@ -9,6 +9,7 @@ import { HackathonSection } from './src/components/hackathon-project/hackathon-s
 import { SkillsSection } from './src/components/skills-section/skills-section.component';
 import { WorkExperience } from './src/components/experience/experience-section.component';
 import { BlogSection } from './src/components/blog-section/blog-section.component';
+import { Footer } from './src/components/common/footer/footer.component';
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
       {/* <SkillsSection /> */}
       <WorkExperience />
       <BlogSection />
+      <Footer />
     </div>
   );
 }
