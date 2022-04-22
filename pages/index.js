@@ -27,13 +27,11 @@ export default function Home() {
         />
       </Head>
 
-      <Navbar />
       <Hero />
       <HackathonSection />
       {/* <SkillsSection /> */}
       <WorkExperience />
       <BlogSection />
-      <Footer />
     </div>
   );
 }

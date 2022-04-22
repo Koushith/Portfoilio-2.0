@@ -35,4 +35,11 @@ export const NavbarContainer = styled.nav`
     border-bottom: 2px solid #5d5dff;
     transition: 0.2s ease;
   }
+  .active {
+    color: #5d5dff;
+    cursor: pointer;
+
+    border-bottom: 2px solid #5d5dff;
+    transition: 0.2s ease;
+  }
 `;

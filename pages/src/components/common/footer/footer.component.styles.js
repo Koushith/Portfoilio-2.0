@@ -17,7 +17,7 @@ export const StyledDiv = styled.div`
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 2.1rem;
-    color: #ebf1f5;
+    color: #d9e3ea;
   }
   ul {
     margin: 2rem 0;
