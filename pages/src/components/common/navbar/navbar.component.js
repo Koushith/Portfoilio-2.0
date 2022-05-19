@@ -8,12 +8,15 @@ export const Navbar = () => {
   return (
     <HeaderContainer>
       <NavbarContainer>
-        {' '}
-        <h2>Koushith</h2>
+        <h2>
+          <Link href='/'>Koushith </Link>
+        </h2>
+
         <ul>
           <li className={pathname === '/about' && 'active'}>
             <Link href='/about'>About</Link>
           </li>
+
           <li className={pathname === '/projects' && 'active'}>
             <Link href='/projects'>Projects</Link>
           </li>
@@ -21,8 +24,8 @@ export const Navbar = () => {
           <li className={pathname === '/timeline' && 'active'}>
             <Link href='/timeline'>Timeline</Link>
           </li>
-          <li className={pathname === '/contact' && 'active'}>
-            <Link href='/contact'>Contact</Link>
+          <li className={pathname === '/blogs' && 'active'}>
+            <Link href='/blogs'>Blog</Link>
           </li>
         </ul>
       </NavbarContainer>

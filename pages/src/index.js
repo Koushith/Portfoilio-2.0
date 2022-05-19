@@ -7,3 +7,4 @@ export * from './components/skills-section/skills-section.component';
 export * from './components/experience/experience-section.component';
 export * from './components/blog-section/blog-section.component';
 export * from './components/common/footer/footer.component';
+export * from './components/project-card/project-card.component';

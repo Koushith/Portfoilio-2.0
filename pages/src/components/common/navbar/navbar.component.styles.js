@@ -16,6 +16,7 @@ export const NavbarContainer = styled.nav`
   h2 {
     color: #d9e3ea;
     font-size: 2rem;
+    cursor: pointer;
   }
   ul {
     list-style: none;

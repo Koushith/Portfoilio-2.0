@@ -5,22 +5,24 @@ import {
   Button,
   ShowAllContainer,
 } from './hackathon-section.component.styles';
-import { Project } from './projects/hackathon-project.component';
+import { ProjectCard } from '../project-card/project-card.component';
+import { useRouter } from 'next/router';
 
 export const HackathonSection = () => {
+  const router = useRouter();
   return (
     <HackathonSectionContainer>
       <Container>
         <h2>Hackathon and Hobby Projects</h2>
         <ProjectsContainer>
-          <Project />
-          <Project />
-          <Project />
-          <Project />
-          <Project />
-          <Project />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
           <ShowAllContainer>
-            <Button>See All Projects</Button>
+            <Button onClick={() => router.push('/projects')}>See All Projects</Button>
           </ShowAllContainer>
         </ProjectsContainer>
       </Container>

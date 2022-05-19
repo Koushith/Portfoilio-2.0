@@ -9,7 +9,7 @@ export const HackathonSectionContainer = styled.section`
 export const ProjectsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 2rem;
 `;
 
 export const Button = styled.button`
