@@ -42,9 +42,19 @@ export const Description = styled.div`
   }
 `;
 
+function getRandomColors(arr) {
+  // get random index value
+  const randomIndex = Math.floor(Math.random() * arr.length);
+
+  // get random item
+  const item = arr[randomIndex];
+
+  return item;
+}
+const array = ['rgb(93, 93, 255)', 'red', 'green'];
 export const Pill = styled.span`
   display: inline-flex;
-  background: rgb(93, 93, 255);
+  background: ${getRandomColors(array)};
   /* background: ${Math.random('rgb(93, 93, 255)', 'red')}; */
   padding: 4px 12px;
   font-size: 1.4rem;

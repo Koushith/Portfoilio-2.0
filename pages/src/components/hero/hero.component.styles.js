@@ -11,7 +11,9 @@ export const InfoContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-
+  h2 {
+    font-size: 26px;
+  }
   img {
     width: 150px !important;
     height: 150px !important;

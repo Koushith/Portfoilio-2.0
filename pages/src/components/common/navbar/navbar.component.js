@@ -27,6 +27,9 @@ export const Navbar = () => {
           <li className={pathname === '/blogs' && 'active'}>
             <Link href='/blogs'>Blog</Link>
           </li>
+          <li className={pathname === '/blogs' && 'active'}>
+            <Link href='/blogs'>Download Resume</Link>
+          </li>
         </ul>
       </NavbarContainer>
     </HeaderContainer>

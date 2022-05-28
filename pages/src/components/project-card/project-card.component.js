@@ -1,4 +1,5 @@
-import { Container, ProjectContainer, Description, Pill, PillContainer } from './project-card.component.styles';
+import { Pill } from '../pill/pill.component';
+import { Container, ProjectContainer, Description, PillContainer } from './project-card.component.styles';
 
 export const ProjectCard = () => {
   return (
@@ -7,8 +8,8 @@ export const ProjectCard = () => {
       <Container>
         <Description>
           <PillContainer>
-            <Pill>Design</Pill>
-            <Pill>Frontend</Pill>
+            <Pill color='1'>Design</Pill>
+            <Pill color='2'>Frontend</Pill>
           </PillContainer>
           <h3>EthDenver2022- A non custodial Wallet application</h3>
         </Description>
