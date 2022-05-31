@@ -29,11 +29,10 @@ export const Container = styled.div`
 `;
 
 export const Description = styled.div`
-  margin-top: -1rem;
   h3 {
     color: #ebf1f5;
     font-size: 16px;
-    line-height: 33px;
+    line-height: 30px;
     weight: 700;
   }
 

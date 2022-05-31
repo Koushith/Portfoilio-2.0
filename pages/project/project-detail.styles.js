@@ -2,6 +2,10 @@ import styled from 'styled-components';
 
 export const ProjectContainer = styled.section`
   margin: 4rem auto;
+  img {
+    width: 100%;
+    overflow: hidden;
+  }
 `;
 
 export const ActionsContainer = styled.div`
@@ -26,6 +30,9 @@ export const DetailsContainer = styled.div`
   .project-title {
     font-size: 2.6rem;
     color: #d9e3ea;
+  }
+  .project-subtitle {
+    font-weight: 500;
   }
   .pill-container {
     margin-top: 1.2rem;

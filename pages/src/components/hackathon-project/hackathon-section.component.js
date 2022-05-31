@@ -8,6 +8,8 @@ import {
 import { ProjectCard } from '../project-card/project-card.component';
 import { useRouter } from 'next/router';
 
+import { UnderlinedButton } from '../primitives/button/button.component';
+
 export const HackathonSection = () => {
   const router = useRouter();
   return (
@@ -22,7 +24,9 @@ export const HackathonSection = () => {
           <ProjectCard />
           <ProjectCard />
           <ShowAllContainer>
-            <Button onClick={() => router.push('/projects')}>See All Projects</Button>
+            {/* <Button onClick={() => router.push('/projects')}>See All Projects</Button> */}
+
+            <UnderlinedButton content='See All Projects' />
           </ShowAllContainer>
         </ProjectsContainer>
       </Container>

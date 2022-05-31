@@ -25,10 +25,10 @@ export const Navbar = () => {
             <Link href='/timeline'>Timeline</Link>
           </li>
           <li className={pathname === '/blogs' && 'active'}>
-            <Link href='/blogs'>Blog</Link>
+            <Link href='/blogs'>Blogs</Link>
           </li>
-          <li className={pathname === '/blogs' && 'active'}>
-            <Link href='/blogs'>Download Resume</Link>
+          <li className={pathname === '/download' && 'active'}>
+            <Link href='/download'>Download Resume</Link>
           </li>
         </ul>
       </NavbarContainer>

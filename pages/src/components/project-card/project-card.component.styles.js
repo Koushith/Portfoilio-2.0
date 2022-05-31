@@ -29,7 +29,7 @@ export const Description = styled.div`
   h3 {
     color: #ebf1f5;
     font-size: 16px;
-    line-height: 33px;
+    line-height: 30px;
     weight: 700;
     margin: 8px 0;
   }

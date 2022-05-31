@@ -14,8 +14,8 @@ export const BlogPostContainer = styled.div`
 
 export const ShowAllContainer = styled.div`
   display: flex !important;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   width: 100%;
   margin-top: 2.8rem;
 `;

@@ -8,4 +8,9 @@ export const PillContainer = styled.span`
   font-size: 1.4rem;
   color: #ebf1f5;
   border-radius: 0.5rem;
+
+  &:hover {
+    /* opacity: 0.33; */
+    transform: scale(1.06);
+  }
 `;

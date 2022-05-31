@@ -28,7 +28,7 @@ export const Button = styled.button`
 
 export const ShowAllContainer = styled.div`
   display: flex !important;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   width: 100%;
 `;

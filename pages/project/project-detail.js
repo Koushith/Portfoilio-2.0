@@ -19,14 +19,19 @@ function ProjectDetail() {
       </ActionsContainer>
       <DetailsContainer>
         <h3 className='project-title'>Safient</h3>
-        <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p className='project-subtitle'>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
         <div className='pill-container'>
           <Pill color='1'>Design</Pill>
           <Pill color='2'>Frontend</Pill>
           <Pill color='3'>Frontend</Pill>
           <Pill color='4'>Frontend</Pill>
           <Pill color='5'>Frontend</Pill>
-          <Pill color='6'>Frontend</Pill>
+          <Pill color='6' pointer>
+            Frontend
+          </Pill>
+          <Pill color='7' pointer>
+            fdgsdf
+          </Pill>
         </div>
 
         <p className='description'>
