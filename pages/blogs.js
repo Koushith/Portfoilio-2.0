@@ -1,73 +1,35 @@
-import React from 'react';
-import styled from 'styled-components';
-import { BlogCard } from './src/components/blog-card/blog-card.component';
-import { Pill } from './src/components/pill/pill.component';
-import { ProjectCard } from './src/components/project-card/project-card.component';
+import axios from 'axios';
+import { BlogPage } from './src/components/page-components/blog-page/blog-pagelayout.component';
 
-const BlogsPageContainer = styled.section`
-  margin: 2rem 0;
+const CONTENT_API_KEY = '47225b98eaa1d61ea1463d34c0';
 
-  margin: 0 auto;
-`;
+async function getPosts() {
+  // "https://demo.ghost.io/ghost/api/v3/content/posts/?key=22444f78447824223cefc48062"
 
-export const BlogsContainer = styled.div`
-  display: flex;
-  /* justify-content: space-evenly; */
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin: 4rem auto;
-`;
+  const res = await fetch(
+    `https://koushith-portfolio-blog.herokuapp.com//ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}`
+  ).then((res) => res.json());
 
-export const FileterContainer = styled.div`
-  margin: 1rem 0 2rem 0;
-  p {
-    font-weight: 500;
-    margin-bottom: 1rem;
-  }
-`;
+  const posts = res.posts;
 
-export const CategoryContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
+  return posts;
+}
 
-  .category {
-    display: flex;
-    align-self: center;
-    gap: 1rem;
-  }
-`;
+export const getStaticProps = async () => {
+  const posts = await getPosts();
+  // const tags = await axios.get(
+  //   'https://koushith-portfolio-blog.herokuapp.com//ghost/api/v3/content/tags/?key=47225b98eaa1d61ea1463d34c0'
+  // );
+  // console.log('tagssss', tags);
+  return {
+    props: { posts },
+    revalidate: 10,
+  };
+};
 
-function Blogs() {
-  return (
-    <BlogsPageContainer>
-      <h2>All Posts</h2>
-      <FileterContainer>
-        <p>TOP CATEGORIES</p>
-        <CategoryContainer>
-          <div className='category'>
-            <Pill color='7' content='React' pointer />
-            <Pill color='7' content='TypeScript' pointer />
-            <Pill color='7' content='Life' pointer />
-            <Pill color='7' content='Others' pointer />
-            <Pill color='7' content='Lols' pointer />
-          </div>
-          <div>
-            {/* <i class='fa-solid fa-sort'></i> */}
-            ji
-          </div>
-        </CategoryContainer>
-      </FileterContainer>
-      <BlogsContainer>
-        <BlogCard />
-        <BlogCard /> <BlogCard /> <BlogCard />
-        <BlogCard /> <BlogCard />
-        <BlogCard />
-        <BlogCard /> <BlogCard />
-      </BlogsContainer>
-    </BlogsPageContainer>
-  );
+function Blogs(props) {
+  const { posts } = props;
+  return <BlogPage posts={posts} />;
 }
 
 export default Blogs;

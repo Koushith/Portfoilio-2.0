@@ -1,16 +1,26 @@
 import styled from 'styled-components';
+import Link from 'next/link';
 
 export const BlogCardContainer = styled.div`
   max-width: 30.2rem;
+  /* align-self: stretch; */
 
+  height: 100%;
   background: #25282c;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: box-shadow 0.3s ease 0s;
-
+  justify-content: flex-end;
+  .feature-image {
+    height: 200px;
+    background: #25282c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
   img {
     width: 100%;
-
     object-fit: cover;
     transform-origin: 65% 75%;
     transition: transform 0.3s, filter 0.5s ease-out;
@@ -26,6 +36,7 @@ export const BlogCardContainer = styled.div`
 
 export const Container = styled.div`
   padding: 0 1rem;
+  margin-top: 1rem;
 `;
 
 export const Description = styled.div`
@@ -33,7 +44,8 @@ export const Description = styled.div`
     color: #ebf1f5;
     font-size: 16px;
     line-height: 30px;
-    weight: 700;
+    weight: 500;
+    line-height: 1.4;
   }
 
   p {
@@ -51,25 +63,29 @@ export const MetaContainer = styled.div`
   margin: 0.8rem 0;
 `;
 
-export const BlogCard = () => {
+export const BlogCard = ({ post }) => {
   return (
-    <BlogCardContainer>
-      <img src='/news-02.jpg' alt='projectImage' />
-      <Container>
-        <Description>
-          <h3>EthDenver2022- A non custodial Wallet application</h3>
-          {/* <p>Lorem, ipsum dolor sit sit amet consectetur sit amet consectetur adipisicing elit.</p> */}
-        </Description>
-        <MetaContainer>
-          <p>
-            <em> 2 Min Read</em>
-          </p>
+    <Link href='/posts/[slug] ' as={`/posts/${post?.slug}`}>
+      <BlogCardContainer>
+        <div className='feature-image'>
+          <img src={post?.feature_image} alt='projectImage' />
+        </div>
+        <Container>
+          <Description>
+            <h3>{post?.title}</h3>
+            {/* <p>Lorem, ipsum dolor sit sit amet consectetur sit amet consectetur adipisicing elit.</p> */}
+          </Description>
+          <MetaContainer>
+            <p>
+              <em> {post?.reading_time} mins</em>
+            </p>
 
-          <p>
-            <em> 14-Jul-2021</em>
-          </p>
-        </MetaContainer>
-      </Container>
-    </BlogCardContainer>
+            <p>
+              <em> {new Date(post?.published_at).toDateString()}</em>
+            </p>
+          </MetaContainer>
+        </Container>
+      </BlogCardContainer>
+    </Link>
   );
 };

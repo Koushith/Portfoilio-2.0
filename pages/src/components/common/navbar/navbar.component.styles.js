@@ -13,6 +13,7 @@ export const NavbarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+  backdrop-filter: saturate(180%) blur(20px);
   h2 {
     color: #d9e3ea;
     font-size: 2rem;

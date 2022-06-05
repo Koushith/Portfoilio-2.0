@@ -1,7 +1,6 @@
 import { PillContainer } from './pill.component.styles';
 
 export const Pill = ({ children, content, color, pointer, ...rest }) => {
-  console.log('cont', content);
   const getRandomColors = (color) => {
     switch (color) {
       case '1':
