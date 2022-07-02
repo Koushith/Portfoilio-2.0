@@ -10,6 +10,7 @@ import { SkillsSection } from './src/components/skills-section/skills-section.co
 import { WorkExperience } from './src/components/experience/experience-section.component';
 import { BlogSection } from './src/components/blog-section/blog-section.component';
 import { Footer } from './src/components/common/footer/footer.component';
+import Timeline from './src/components/timeline/time-line.component';
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
       {/* <SkillsSection /> */}
       <WorkExperience />
       <BlogSection />
+      <Timeline />
     </div>
   );
 }

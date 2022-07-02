@@ -61,6 +61,7 @@ export const MetaContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 0.8rem 0;
+  font-size: 1.6rem;
 `;
 
 export const BlogCard = ({ post }) => {

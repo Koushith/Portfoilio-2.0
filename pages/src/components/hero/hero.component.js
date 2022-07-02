@@ -35,19 +35,31 @@ export const Hero = () => {
           </Description>
           <SocialContainer>
             <li>
-              <i className='fa-brands fa-github' />
+              <i className='fa-brands fa-github' onClick={() => window.open('https://github.com/koushith', '_blank')} />
             </li>
             <li>
-              <i className='fa-brands fa-twitter' />
+              <i
+                className='fa-brands fa-twitter'
+                onClick={() => window.open('https://twitter.com/KoushithAmin', '_blank')}
+              />
             </li>
             <li>
-              <i className='fa-brands fa-linkedin' />
+              <i
+                className='fa-brands fa-linkedin'
+                onClick={() => window.open('https://www.linkedin.com/in/koushith-amin-663787146/', '_blank')}
+              />
             </li>
             <li>
-              <i className='fa-brands fa-youtube' />
+              <i
+                className='fa-brands fa-youtube'
+                onClick={() => window.open('https://www.youtube.com/channel/UC2jU6KNhrAPJ4LIWDuiagnA/videos', '_blank')}
+              />
             </li>
             <li>
-              <i className='fa-brands fa-dribbble-square' />
+              <i
+                className='fa-brands fa-dribbble-square'
+                onClick={() => window.open('https://dribbble.com/Koushith', '_blank')}
+              />
             </li>
           </SocialContainer>
         </DescriptionContainer>

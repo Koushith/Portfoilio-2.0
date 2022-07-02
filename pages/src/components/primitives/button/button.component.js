@@ -4,10 +4,10 @@ export const Button = () => {
   return <>btn</>;
 };
 
-export const UnderlinedButton = ({ content, ...rest }) => {
+export const UnderlinedButton = ({ children, content, ...rest }) => {
   return (
     <Underlined {...rest}>
-      {content}
+      {content ? content : children}
       <i className='fa-solid fa-right-long'></i>
     </Underlined>
   );

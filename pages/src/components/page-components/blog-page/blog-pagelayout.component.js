@@ -1,8 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { FiList, FiGrid } from 'react-icons/fi';
 import { BlogCard } from '../../blog-card/blog-card.component';
 import { Pill } from '../../pill/pill.component';
 import Link from 'next/link';
+import { BlogList } from './blog-list.component';
+
 const BlogsPageContainer = styled.section`
   margin: 2rem 0;
   margin: 0 auto;
@@ -53,11 +56,11 @@ export const getStaticProps = async () => {
 // todo- fix later;
 
 export const BlogPage = ({ posts }, props) => {
+  const [list, setList] = useState(false);
   return (
     <BlogsPageContainer>
       <h2>All Posts</h2>
       <FileterContainer>
-        <p>TOP CATEGORIES</p>
         <CategoryContainer>
           <div className='category'>
             <Pill color='7' content='React' pointer />
@@ -66,21 +69,21 @@ export const BlogPage = ({ posts }, props) => {
             <Pill color='7' content='Others' pointer />
             <Pill color='7' content='Lols' pointer />
           </div>
-          <div className='layout' style={{ background: 'aqua' }}>
-            <i className='fa-solid fa-sort'></i>
-            <i className='fa-solid fa-list'></i>
-            <i className='fa-solid fa-grid'></i>
-            <i className='fa-solid fa-list'></i>
-            <i className='fa-brands fa-github' />
+          <div className='layout' onClick={() => setList((list) => !list)}>
+            {!list ? (
+              <FiList size={'24px'} fontWeight={600} color={'#ebf1f5'} cursor={'pointer'} />
+            ) : (
+              <FiGrid size={'24px'} color={'#ebf1f5'} cursor={'pointer'} />
+            )}
           </div>
         </CategoryContainer>
       </FileterContainer>
       <BlogsContainer>
-        {posts.map((post, index) => (
-          <BlogCard post={post} />
-        ))}
+        {posts.map((post, index) =>
+          list ? <BlogList post={post} key={index} /> : <BlogCard post={post} key={index} />
+        )}
       </BlogsContainer>
-      <ListsContainer>{/* <BlogList /> */}</ListsContainer>
+      <ListsContainer></ListsContainer>
     </BlogsPageContainer>
   );
 };

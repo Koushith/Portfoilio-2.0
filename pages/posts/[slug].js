@@ -34,6 +34,13 @@ export const ArticleContainer = styled.article`
   .prose p {
     margin-top: 1.25em;
     margin-bottom: 1.25em;
+    font-weight: 400;
+  }
+  .prose a {
+    color: #5d5dff;
+    text-decoration: underline;
+    font-weight: 500;
+    cursor: pointer;
   }
 
   .prose strong {
@@ -54,13 +61,12 @@ export const ArticleContainer = styled.article`
   blockquote {
     font-weight: 500;
     font-style: italic;
-    color: #111827;
 
     margin-top: 1.6em;
     margin-bottom: 1.6em;
     padding-left: 1em;
     border-left-width: 0.25rem;
-    border-left-color: red;
+    border-left-color: #e5e7eb;
   }
 `;
 
