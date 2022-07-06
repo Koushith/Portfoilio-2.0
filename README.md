@@ -7,7 +7,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 
 - [ ] Responsiveness
-- [ ] Change Timeline style
+- [x] Change Timeline style
 - [ ] Add youTube to home screen
 - [x] Fix blog cads sizing issue
 - [x] Add another list style for blog
@@ -15,6 +15,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - [ ] responsiveness
 - [ ] LightMode
 - [ ] loaders
-- [ ] Width issues on blog page
+- [x] Width issues on blog page
 - [ ] won badge for hackathon
 - [ ] Refactors
+- [ ] size-consistent
