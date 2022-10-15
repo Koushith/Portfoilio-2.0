@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const HackathonSectionContainer = styled.section`
   h2 {
@@ -7,9 +7,13 @@ export const HackathonSectionContainer = styled.section`
 `;
 
 export const ProjectsContainer = styled.div`
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 2rem; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.2rem;
+  /* justify-items: center; */
 `;
 
 export const Button = styled.button`

@@ -1,19 +1,22 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Underlined = styled.button`
   border: none;
   color: #ebf1f5;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 500;
-  /* border-bottom: 2px solid rgb(93, 93, 255); */
-  background: #25282c;
-  /* background: transparent; */
+  font-family: inherit;
+
+  background: var(--color-subtle-floating);
+
   line-height: 27px;
   cursor: pointer;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
+  transition: all 0.3s;
   &:hover {
-    background: rgb(93, 93, 255);
+    font-family: inherit;
+    background: var(--color-primary);
   }
   i {
     color: #ebf1f5;

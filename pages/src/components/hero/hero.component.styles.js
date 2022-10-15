@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const HeroContainer = styled.section`
   height: 70vh;
@@ -11,9 +11,15 @@ export const InfoContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+
+  .job-title {
+    /* margin-top: -1rem; */
+  }
   h2 {
     font-size: 26px;
+    font-weight: 700;
   }
+
   img {
     width: 150px !important;
     height: 150px !important;

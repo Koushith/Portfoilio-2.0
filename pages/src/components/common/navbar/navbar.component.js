@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { HeaderContainer, NavbarContainer } from './navbar.component.styles';
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { HeaderContainer, NavbarContainer } from "./navbar.component.styles";
 
 export const Navbar = () => {
   const { pathname } = useRouter();
@@ -9,26 +9,23 @@ export const Navbar = () => {
     <HeaderContainer>
       <NavbarContainer>
         <h2>
-          <Link href='/'>Koushith </Link>
+          <Link href="/">Koushith </Link>
         </h2>
 
         <ul>
-          <li className={pathname === '/about' && 'active'}>
-            <Link href='/about'>About</Link>
+          <li className={pathname === "/about" && "active"}>
+            <Link href="/about">About</Link>
           </li>
 
-          <li className={pathname === '/projects' && 'active'}>
-            <Link href='/projects'>Projects</Link>
+          <li className={pathname === "/projects" && "active"}>
+            <Link href="/projects">Projects</Link>
           </li>
 
-          <li className={pathname === '/timeline' && 'active'}>
-            <Link href='/timeline'>Timeline</Link>
+          <li className={pathname === "/blogs" && "active"}>
+            <Link href="/blogs">Blogs</Link>
           </li>
-          <li className={pathname === '/blogs' && 'active'}>
-            <Link href='/blogs'>Blogs</Link>
-          </li>
-          <li className={pathname === '/download' && 'active'}>
-            <Link href='/download'>Download Resume</Link>
+          <li className={pathname === "/download" && "active"}>
+            <Link href="/download">Download Resume</Link>
           </li>
         </ul>
       </NavbarContainer>

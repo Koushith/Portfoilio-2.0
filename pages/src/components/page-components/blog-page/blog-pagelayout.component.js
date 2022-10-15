@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import { FiList, FiGrid } from 'react-icons/fi';
-import { BlogCard } from '../../blog-card/blog-card.component';
-import { Pill } from '../../pill/pill.component';
-import Link from 'next/link';
-import { BlogList } from './blog-list.component';
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import { FiList, FiGrid } from "react-icons/fi";
+import { BlogCard } from "../../blog-card/blog-card.component";
+import { Pill } from "../../pill/pill.component";
+import Link from "next/link";
+import { BlogList } from "./blog-list.component";
 
 const BlogsPageContainer = styled.section`
   margin: 2rem 0;
@@ -44,9 +44,9 @@ export const ListsContainer = styled.div``;
 
 export const getStaticProps = async () => {
   const tags = await axios.get(
-    'https://koushith-portfolio-blog.herokuapp.com//ghost/api/v3/content/tags/?key=47225b98eaa1d61ea1463d34c0'
+    "https://koushith-portfolio-blog.herokuapp.com//ghost/api/v3/content/tags/?key=47225b98eaa1d61ea1463d34c0"
   );
-  console.log('tt', tags);
+  console.log("tt", tags);
   return {
     props: { tags },
     revalidate: 10,
@@ -56,32 +56,24 @@ export const getStaticProps = async () => {
 // todo- fix later;
 
 export const BlogPage = ({ posts }, props) => {
-  const [list, setList] = useState(false);
   return (
     <BlogsPageContainer>
       <h2>All Posts</h2>
       <FileterContainer>
         <CategoryContainer>
-          <div className='category'>
-            <Pill color='7' content='React' pointer />
-            <Pill color='7' content='TypeScript' pointer />
-            <Pill color='7' content='Life' pointer />
-            <Pill color='7' content='Others' pointer />
-            <Pill color='7' content='Lols' pointer />
-          </div>
-          <div className='layout' onClick={() => setList((list) => !list)}>
-            {!list ? (
-              <FiList size={'24px'} fontWeight={600} color={'#ebf1f5'} cursor={'pointer'} />
-            ) : (
-              <FiGrid size={'24px'} color={'#ebf1f5'} cursor={'pointer'} />
-            )}
+          <div className="category">
+            <Pill color="7" content="React" pointer />
+            <Pill color="7" content="TypeScript" pointer />
+            <Pill color="7" content="Life" pointer />
+            <Pill color="7" content="Others" pointer />
+            <Pill color="7" content="Lols" pointer />
           </div>
         </CategoryContainer>
       </FileterContainer>
       <BlogsContainer>
-        {posts.map((post, index) =>
-          list ? <BlogList post={post} key={index} /> : <BlogCard post={post} key={index} />
-        )}
+        {posts.map((post, index) => (
+          <BlogList post={post} key={index} />
+        ))}
       </BlogsContainer>
       <ListsContainer></ListsContainer>
     </BlogsPageContainer>

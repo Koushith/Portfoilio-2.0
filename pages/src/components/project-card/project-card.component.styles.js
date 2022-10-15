@@ -1,10 +1,12 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ProjectContainer = styled.div`
-  max-width: 32rem;
-  background: #25282c;
+  min-width: 32rem;
+  background: var(--color-subtle-floating);
   border-radius: 0.5rem;
+  overflow: hidden;
   cursor: pointer;
+
   img {
     width: 100%;
     object-fit: cover;
@@ -26,11 +28,12 @@ export const Container = styled.div`
 `;
 
 export const Description = styled.div`
+  margin-top: 1rem;
   h3 {
     color: #ebf1f5;
     font-size: 16px;
-    line-height: 30px;
-    weight: 700;
+    line-height: 1.6;
+    font-weight: 700;
     margin: 8px 0;
   }
 
@@ -38,7 +41,7 @@ export const Description = styled.div`
     font-size: 18px;
     line-height: 27px;
     color: #9ba9b4;
-    weight: 400;
+    font-weight: 400;
   }
 `;
 
@@ -51,11 +54,11 @@ function getRandomColors(arr) {
 
   return item;
 }
-const array = ['rgb(93, 93, 255)', 'red', 'green'];
+const array = ["rgb(93, 93, 255)", "red", "green"];
 export const Pill = styled.span`
   display: inline-flex;
   background: ${getRandomColors(array)};
-  /* background: ${Math.random('rgb(93, 93, 255)', 'red')}; */
+  /* background: ${Math.random("rgb(93, 93, 255)", "red")}; */
   padding: 4px 12px;
   font-size: 1.4rem;
   color: #ebf1f5;
